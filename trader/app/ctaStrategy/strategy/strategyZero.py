@@ -116,41 +116,48 @@ class ZeroStrategy(CtaTemplate):
         elif fangxiang == 'short':
             self.shortOrder = None
     #----------------------------------------------------------------------
+    def tickCelve(self,tick):
+        am = self.am
+        fangxiang = None
+        price = None
+        if tick.datetime.second > 53:
+            if am.diff > 0 and am.macd < 0 and am.lastmacd > 0:
+                fangxiang = duo
+                price = tick.bidPrice1
+
+            elif am.macd > 0 and am.lastmacd < 0:
+                if self.pos > 0:
+
+                    fangxiang = duoping
+                    price = tick.askPrice1
+                elif self.longOrder is not None:
+                    self.cancelVtOrder(self.longOrder, u'平多仓时候', 'long')
+
+            if am.diff < 0 and am.macd > 0 and am.lastmacd < 0:
+
+                fangxiang = kong
+                price = tick.askPrice1
+
+            elif am.macd < 0 and am.lastmacd > 0:
+                if self.pos < 0:
+                    fangxiang = kongping
+                    price = tick.bidPrice1
+                elif self.shortOrder is not None:
+                    self.cancelVtOrder(self.shortOrder, u'平空仓时候', 'short')
+        return fangxiang,price
+
+    #----------------------------------------------------------------------
+
     def onTick(self, tick):
 
         """收到行情TICK推送（必须由用户继承实现）"""
         self.bg.updateTick(tick)
         self.am.updateTick(tick)
-        am = self.am
 
         if not self.stopcount:
             fangxiang = None
             price = None
-            if tick.datetime.second > 53 :
-                if am.diff > 0 and am.macd < 0 and am.lastmacd > 0 :
-                    fangxiang = duo
-                    price = tick.bidPrice1
-
-                elif am.macd > 0 and am.lastmacd < 0:
-                    if self.pos>0:
-
-                       fangxiang = duoping
-                       price = tick.askPrice1
-                    elif self.longOrder is not None:
-                        self.cancelVtOrder(self.longOrder,u'平多仓时候','long')
-
-                if am.diff < 0 and am.macd > 0 and am.lastmacd < 0:
-
-                    fangxiang = kong
-                    price = tick.askPrice1
-
-                elif am.macd < 0 and am.lastmacd > 0:
-                    if self.pos < 0:
-                      fangxiang = kongping
-                      price = tick.bidPrice1
-                    elif self.shortOrder is not None:
-                        self.cancelVtOrder(self.shortOrder,u'平空仓时候','short')
-
+            fangxiang,price = self.tickCelve(tick)
 
             self.chulikaipingcang(fangxiang,price)
     def checkPingcang(self,bar):

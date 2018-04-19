@@ -55,6 +55,7 @@ class CtaTemplate(object):
 
 
 
+
         # 设置策略的参数
         if setting:
             d = self.__dict__
@@ -468,7 +469,6 @@ class ArrayManager(object):
         self.lowArray = np.zeros(size)
         self.closeArray = np.zeros(size)
         self.volumeArray = np.zeros(size)
-        self.macdArray = np.zeros(size)
 
 
     #----------------------------------------------------------------------

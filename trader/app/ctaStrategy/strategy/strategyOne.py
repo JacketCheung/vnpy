@@ -36,52 +36,63 @@ class OneStrategy(ZeroStrategy):
         # YUNX
         self.yunCount = 0
         self.yunLastTick = None
-    def onTick(self, tick):
+    def buyTickCelve(self,tick):
+        am = self.am
+        fangxiang = None
+        price = None
+        if tick.datetime.second > 53:
+            if am.diff > 0 and am.macd < 0 and am.lastmacd > 0:
+                fangxiang = duo
+                price = tick.bidPrice1
 
-            """收到行情TICK推送（必须由用户继承实现）"""
-            self.bg.updateTick(tick)
-            self.am.updateTick(tick)
-            am = self.am
+            elif am.macd > 0 and am.lastmacd < 0:
+                fangxiang = duoping
+                price = tick.askPrice1
+        if fangxiang in [duo, kong, duoping, kongping]:
+            if self.yunCount == 0:
+                self.yunCount = 5
+        if self.yunCount > 0:
+            self.yunCount -= 1
+            self.yunchulifangxiang(fangxiang, tick)
+    def shortTickCelve(self,tick):
+        am = self.am
+        fangxiang = None
+        price = None
+        if tick.datetime.second > 53:
+            if am.diff < 0 and am.macd > 0 and am.lastmacd < 0:
 
-            if not self.stopcount:
-                fangxiang = None
-                price = None
-                if tick.datetime.second > 53:
-                    if am.diff > 0 and am.macd < 0 and am.lastmacd > 0:
-                        fangxiang = duo
-                        price = tick.bidPrice1
+                fangxiang = kong
+                price = tick.askPrice1
 
-                    elif am.macd > 0 and am.lastmacd < 0:
-                        if self.pos > 0:
+            elif am.macd < 0 and am.lastmacd > 0:
+                    fangxiang = kongping
+                    price = tick.bidPrice1
+        if fangxiang in [duo, kong, duoping, kongping]:
+            if self.yunCount == 0:
+                self.yunCount = 5
+        if self.yunCount > 0:
+            self.yunCount -= 1
+            self.yunchulifangxiang(fangxiang, tick)
 
-                            fangxiang = duoping
-                            price = tick.askPrice1
-                        elif self.longOrder is not None:
-                            self.cancelVtOrder(self.longOrder, u'平多仓时候', 'long')
 
-                    if am.diff < 0 and am.macd > 0 and am.lastmacd < 0:
-
-                        fangxiang = kong
-                        price = tick.askPrice1
-
-                    elif am.macd < 0 and am.lastmacd > 0:
-                        if self.pos < 0:
-                            fangxiang = kongping
-                            price = tick.bidPrice1
-                        elif self.shortOrder is not None:
-                            self.cancelVtOrder(self.shortOrder, u'平空仓时候', 'short')
-                self.chulikaipingcang(fangxiang, price)
-                if fangxiang in [duo,kong,duoping,kongping]:
-                            if self.yunCount == 0:
-                                self.yunCount = 5
-                if self.yunCount > 0:
-                                self.yunCount -= 1
-                                self.yunchulifangxiang(fangxiang,tick)
     def yunchulifangxiang(self,fangxiang,tick):
+        fang = None
+        price = None
         if self.yunLastTick is not None:
             if self.yunLastTick.datetime.minute != tick.datetime.minute:
                 if self.yunCount < 3:
-                    fang,price = self.tickCelve(tick)
+                    diffArray,deaArray,macdArray = self.am.MACD(12,26,9,True)
+                    lastMacd = macdArray[-2]
+                    secondLastMacd = macdArray[-3]
+                    if secondLastMacd > 0 and lastMacd < 0 and diffArray[-2] > 0:
+                        fang = duo
+                    elif secondLastMacd < 0 and lastMacd > 0 :
+                        fang = duoping
+                    self.chulikaipingcang(fang,price)
+                    if secondLastMacd < 0 and lastMacd > 0 and diffArray[-2] < 0:
+                        fang = kong
+                    elif secondLastMacd > 0 and lastMacd < 0 :
+                        fang = kongping
                     self.chulikaipingcang(fang,price)
             else:
                 if self.yunCount == 0:

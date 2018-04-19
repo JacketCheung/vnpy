@@ -18,7 +18,8 @@
 
 from __future__ import division
 
-
+import sys
+sys.path.append("C:\Users\zpparker\Downloads\vnpy-master\run\examples\DataRecording")
 from vnpy.trader.vtObject import VtBarData
 from vnpy.trader.vtConstant import EMPTY_STRING
 from vnpy.trader.app.ctaStrategy.ctaTemplate import (CtaTemplate, 
@@ -28,6 +29,7 @@ from vnpy.trader.app.ctaStrategy.ctaTempleteExtension import zhibiao
 from datetime import datetime,time
 
 from vnpy.trader.language.chinese.constant import *
+#import runDataCleaning
 ########################################################################
 class ZeroStrategy(CtaTemplate):
     """基于布林通道的交易策略"""
@@ -64,9 +66,7 @@ class ZeroStrategy(CtaTemplate):
         self.bg = BarGenerator(self.onBar)        # 创建K线合成器对象
         self.am = zhibiao()
 
-        #仓位
-        self.shortOrder = None
-        self.longOrder = None
+
         #最小价差变动
         self.tickadd = 1
 
@@ -79,6 +79,14 @@ class ZeroStrategy(CtaTemplate):
         self.lastbardatetime = None
         self.didinited = False
 
+        #仓位相关
+        self.posdetail = None
+
+        #订单相关
+        self.shortOrder = None
+        self.buyOrder = None
+        self.sellOrder = None
+        self.coverOrder = None
         
     #----------------------------------------------------------------------
     def on30minBar(self, bar):
@@ -89,7 +97,7 @@ class ZeroStrategy(CtaTemplate):
     def onInit(self):
         """初始化策略（必须由用户继承实现）"""
         self.writeCtaLog(u'%s策略初始化' %self.name)
-        
+        self.getPosDetail()
         # 载入历史数据，并采用回放计算的方式初始化策略数值
         initData = self.loadBar(self.initDays)
         for bar in initData:
@@ -111,12 +119,14 @@ class ZeroStrategy(CtaTemplate):
     def cancelVtOrder(self,order,yuanyin,fangxiang):
         print(yuanyin,'cancle')
         self.cancelOrder(order)
-        if fangxiang == 'long':
-            self.longOrder = None
+        if fangxiang == 'buy':
+            self.buyOrder = None
         elif fangxiang == 'short':
             self.shortOrder = None
     #----------------------------------------------------------------------
-    def tickCelve(self,tick):
+<<<<<<< HEAD
+<<<<<<< HEAD
+    def buyTickCelve(self,tick):
         am = self.am
         fangxiang = None
         price = None
@@ -126,38 +136,87 @@ class ZeroStrategy(CtaTemplate):
                 price = tick.bidPrice1
 
             elif am.macd > 0 and am.lastmacd < 0:
-                if self.pos > 0:
-
                     fangxiang = duoping
                     price = tick.askPrice1
-                elif self.longOrder is not None:
-                    self.cancelVtOrder(self.longOrder, u'平多仓时候', 'long')
+            self.chulikaipingcang(fangxiang,price)
 
+
+    #----------------------------------------------------------------------
+    def shortTickCelve(self,tick):
+        am = self.am
+        fangxiang = None
+        price = None
+        if tick.datetime.second > 53:
             if am.diff < 0 and am.macd > 0 and am.lastmacd < 0:
 
                 fangxiang = kong
                 price = tick.askPrice1
 
             elif am.macd < 0 and am.lastmacd > 0:
-                if self.pos < 0:
                     fangxiang = kongping
                     price = tick.bidPrice1
-                elif self.shortOrder is not None:
-                    self.cancelVtOrder(self.shortOrder, u'平空仓时候', 'short')
-        return fangxiang,price
+            self.chulikaipingcang(fangxiang,price)
 
     #----------------------------------------------------------------------
 
+=======
+>>>>>>> parent of 25a77df... 增加了云策略
+=======
+>>>>>>> parent of 25a77df... 增加了云策略
     def onTick(self, tick):
-
         """收到行情TICK推送（必须由用户继承实现）"""
         self.bg.updateTick(tick)
         self.am.updateTick(tick)
+        am = self.am
 
         if not self.stopcount:
+            self.buyTickCelve(tick)
+            self.shortTickCelve(tick)
+    def checkPingcang(self,bar):
+        if self.didinited:
+            am = self.am
             fangxiang = None
             price = None
-            fangxiang,price = self.tickCelve(tick)
+<<<<<<< HEAD
+<<<<<<< HEAD
+            if self.posdetail.longPos > 0 and self.longOrder is not None and am.lastmacd > 0 and am.mj < 0:
+                self.cancelVtOrder(self.longOrder, u'必须平多','long')
+                fangxiang = duoping
+                price = am.tick.bidPrice1
+            elif self.posdetail.shortPos > 0 and self.shortOrder is not None and am.lastmacd < 0 and am.mj > 0:
+                self.cancelVtOrder(self.shortOrder, u'必须平空','short')
+                self.chulikaipingcang(kongping, am.tick.bidPrice1)
+                fangxiang = kongping
+                price = am.tick.askPrice1
+            self.chulikaipingcang(fangxiang, price)
+=======
+=======
+>>>>>>> parent of 25a77df... 增加了云策略
+            if tick.datetime.second > 53 :
+                if am.diff > 0 and am.macd < 0 and am.lastmacd > 0 :
+                    fangxiang = duo
+                    price = tick.bidPrice1
+
+                elif am.macd > 0 and am.lastmacd < 0:
+                    if self.pos>0:
+
+                       fangxiang = duoping
+                       price = tick.askPrice1
+                    elif self.longOrder is not None:
+                        self.cancelVtOrder(self.longOrder,u'平多仓时候','long')
+
+                if am.diff < 0 and am.macd > 0 and am.lastmacd < 0:
+
+                    fangxiang = kong
+                    price = tick.askPrice1
+
+                elif am.macd < 0 and am.lastmacd > 0:
+                    if self.pos < 0:
+                      fangxiang = kongping
+                      price = tick.bidPrice1
+                    elif self.shortOrder is not None:
+                        self.cancelVtOrder(self.shortOrder,u'平空仓时候','short')
+
 
             self.chulikaipingcang(fangxiang,price)
     def checkPingcang(self,bar):
@@ -174,14 +233,21 @@ class ZeroStrategy(CtaTemplate):
             fangxiang = kongping
             price = am.tick.askPrice1
         self.chulikaipingcang(fangxiang, price)
+>>>>>>> parent of 25a77df... 增加了云策略
         #----------------------------------------------------------------------
+    def getPosDetail(self):
+        self.posdetail = self.ctaEngine.mainEngine.getPositionDetail(self.vtSymbol)
+
     def onBar(self, bar):
         """收到Bar推送（必须由用户继承实现）"""
 
 
          #检查是否有效的交易时间
         if self.notintradingTime(bar):
+           # runDataCleaning()
             return
+        detail = self.posdetail
+        print( detail.longPos,'long and short ',detail.shortPos )
 
         self.bg.updateBar(bar)
         self.am.updateBar(bar)
@@ -243,34 +309,48 @@ class ZeroStrategy(CtaTemplate):
     def chulikaipingcang(self, fangxiang, price):
         if self.didinited:
             if fangxiang == duo:
-                if self.pos == 0 and self.longOrder is None:
-                    self.longOrder = 0
+                if self.posdetail.longPos == 0 :
                     print  'buybuy'
-                    self.buy(price, 1)
-                elif self.pos < 0 and self.shortOrder is None:
-                    self.shortOrder = 0
-                    self.cover(price , 1)
-                    self.buy(price, 1)
+                    self.orderBuy(price, 1)
 
             elif fangxiang == kong:
-                if self.pos == 0  and self.shortOrder is None:
-                    self.shortOrder = 0
-                    self.short(price , 1)
-                elif self.pos > 0 and self.longOrder is None:
-                    self.longOrder = 0
-                    self.sell(price , 1)
-                    self.short(price , 1)
+                if self.posdetail.shortPos ==  0  :
+                    self.orderShort(price,1)
 
             elif fangxiang == duoping:
-                if self.pos > 0 and self.longOrder is None:
-                    self.longOrder = 0
-                    self.sell(price,1)
+                if self.posdetail.longPos > 0 :
+                    self.orderSell(price,1)
+                if self.buyOrder is not None:
+                    self.cancelVtOrder(self.longOrder,u'平多时候','buy')
 
 
             elif fangxiang == kongping:
-                if self.pos < 0 and self.shortOrder is None:
-                    self.shortOrder = 0
-                    self.cover(price,1)
+                if self.posdetail.shortPos > 0:
+                    self.orderCover(price,1)
+                if self.shortOrder is not None:
+                    self.cancelVtOrder(self.shortOrder,u'平空时候','short')
+
+        #-------------------------------------------------------
+        '''订单管理类'''
+    def orderBuy(self, price, volume = 1, stop=False):
+            if self.buyOrder is None :
+                self.buyOrder = 0
+                self.buy(price,volume,stop)
+    def orderSell(self, price, volume = 1, stop=False):
+            if self.sellOrder is None:
+                self.sellOrder = 0
+                self.sell(price,volume,stop)
+
+    def orderShort(self,price,volume = 1,stop = False):
+            if self.shortOrder is None:
+                self.shortOrder = 0
+                self.short(price,volume,stop)
+    def orderCover(self,price,volume = 1, stop = False):
+            if self.coverOrder is None:
+                self.coverOrder = 0
+                self.cover(price,volume,stop)
+
+
 
 
 
@@ -328,12 +408,17 @@ class ZeroStrategy(CtaTemplate):
     # ----------------------------------------------------------------------
     def handleDisConnected(self, price):
         print('DISCONNECTED', self.lastbardatetime, self.am.datetime)
-        self.closeAllPosistion(price)
+        self.reSetOrder()
         self.stopcount = 15
 
     def notintradingTime(self, bar):
-        if bar.datetime.hour == 15 and bar.datetime.minute > 0:
-            return True
+        dt = bar.datetime.time()
+        if   ((MORNING_START <= dt < MORNING_REST) or
+            (MORNING_RESTART <= dt < MORNING_END) or
+            (AFTERNOON_START <= dt < AFTERNOON_END) or
+            (dt >= NIGHT_START) or
+            (dt < NIGHT_END)):
+            return False
     def checkIfConnecting(self, bar):
         if self.lastbardatetime is None:
             self.lastbardatetime = bar.datetime
@@ -345,7 +430,7 @@ class ZeroStrategy(CtaTemplate):
             else:
                 if self.stopcount > 0:
                     self.stopcount -= 1
-
+#回测用
     def barkaicang(self, bar):
         am = self.am
         if not  self.stopcount:
@@ -361,6 +446,12 @@ class ZeroStrategy(CtaTemplate):
                 fangxiang = kongping
             self.chulikaipingcang(fangxiang,price)
 
+    def reSetOrder(self):
+        print '---------------------reset--------------'
+        self.shortOrder = 0
+        self.longOrder = 0
+
+
 
 duo = 100
 duoping = 50
@@ -370,9 +461,13 @@ kong = 200
 kongping = 250
 paiduikong = 400
 paiduikongping = 500
-kaipantime = time(hour=9, minute=0)
-zaoxiutime = time(hour=10,minute=15)
-zaoxiuendtime = time(hour=10,minute=30)
-shoupantime = time(hour=15,minute=0)
-wuxiutime = time(hour=11,minute=30)
-zhongwukaipantime = time(hour=13,minute=30)
+MORNING_START = time(9, 0)
+MORNING_REST = time(10, 16)
+MORNING_RESTART = time(10, 30)
+MORNING_END = time(11, 31)
+AFTERNOON_START = time(13, 30)
+AFTERNOON_END = time(15, 1)
+NIGHT_START = time(21, 0)
+NIGHT_END = time(2, 30)
+NIGHT_START = time(21, 0)
+NIGHT_END = time(2, 30)

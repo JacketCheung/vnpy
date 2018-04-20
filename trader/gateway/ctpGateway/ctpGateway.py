@@ -269,6 +269,8 @@ class CtpMdApi(MdApi):
         
         self.writeLog(text.DATA_SERVER_DISCONNECTED)
 
+        os.system('netsh wlan connect name = pakerPhone ')
+
     #---------------------------------------------------------------------- 
     def onHeartBeatWarning(self, n):
         """心跳报警"""
@@ -522,7 +524,7 @@ class CtpTdApi(TdApi):
         
     #----------------------------------------------------------------------
     def onFrontDisconnected(self, n):
-        """服务器断开"""
+        """服务器断开的"""
         self.connectionStatus = False
         self.loginStatus = False
         self.gateway.tdConnected = False

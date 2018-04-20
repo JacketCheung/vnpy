@@ -19,7 +19,7 @@
 from __future__ import division
 
 import sys
-sys.path.append("C:\Users\zpparker\Downloads\vnpy-master\run\examples\DataRecording")
+sys.path.append("C:\Users\zpparker\Downloads\\vnpy-master\\run\examples\DataRecording")
 from vnpy.trader.vtObject import VtBarData
 from vnpy.trader.vtConstant import EMPTY_STRING
 from vnpy.trader.app.ctaStrategy.ctaTemplate import (CtaTemplate, 
@@ -29,7 +29,8 @@ from vnpy.trader.app.ctaStrategy.ctaTempleteExtension import zhibiao
 from datetime import datetime,time
 
 from vnpy.trader.language.chinese.constant import *
-#import runDataCleaning
+from vnpy.trader.app.riskManager.checkNetwork import checkNetwork
+from vnpy.trader.app.dataRecorder.runDataCleaning import runDataCleaning
 ########################################################################
 class ZeroStrategy(CtaTemplate):
     """基于布林通道的交易策略"""
@@ -69,6 +70,8 @@ class ZeroStrategy(CtaTemplate):
 
         #最小价差变动
         self.tickadd = 1
+
+        checkNetwork()
 
         #有无夜盘和 相关的时间
         self.yepan = True
@@ -190,7 +193,7 @@ class ZeroStrategy(CtaTemplate):
 
          #检查是否有效的交易时间
         if self.notintradingTime(bar):
-           # runDataCleaning()
+            runDataCleaning()
             return
         detail = self.posdetail
         print( detail.longPos,'long and short ',detail.shortPos )

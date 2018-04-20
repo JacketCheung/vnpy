@@ -29,7 +29,6 @@ from vnpy.trader.app.ctaStrategy.ctaTempleteExtension import zhibiao
 from datetime import datetime,time
 
 from vnpy.trader.language.chinese.constant import *
-from vnpy.trader.app.riskManager.checkNetwork import checkNetwork
 from vnpy.trader.app.dataRecorder.runDataCleaning import runDataCleaning
 ########################################################################
 class ZeroStrategy(CtaTemplate):
@@ -71,7 +70,6 @@ class ZeroStrategy(CtaTemplate):
         #最小价差变动
         self.tickadd = 1
 
-        checkNetwork()
 
         #有无夜盘和 相关的时间
         self.yepan = True

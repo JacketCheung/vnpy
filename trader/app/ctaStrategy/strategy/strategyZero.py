@@ -188,7 +188,6 @@ class ZeroStrategy(CtaTemplate):
     def onBar(self, bar):
         """收到Bar推送（必须由用户继承实现）"""
 
-
          #检查是否有效的交易时间
         if self.notintradingTime(bar):
             runDataCleaning()
@@ -356,7 +355,7 @@ class ZeroStrategy(CtaTemplate):
     def handleDisConnected(self, price):
         print('DISCONNECTED', self.lastbardatetime, self.am.datetime)
         self.reSetOrder()
-        self.stopcount = 15
+        self.stopcount = 20
 
     def notintradingTime(self, bar):
         dt = bar.datetime.time()

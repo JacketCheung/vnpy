@@ -32,7 +32,7 @@ def onChart(symbol, seconds):
     
 
 if __name__ == "__main__":
-    symbol = 'IF1710'
+    symbol = 'SHFE.rb1810'
     
     api = TqApi()
     

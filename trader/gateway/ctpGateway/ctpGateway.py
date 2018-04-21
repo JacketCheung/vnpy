@@ -268,6 +268,7 @@ class CtpMdApi(MdApi):
         self.gateway.mdConnected = False
         
         self.writeLog(text.DATA_SERVER_DISCONNECTED)
+        print('disconnet********************hangqing')
 
         os.system('netsh wlan connect name = pakerPhone ')
 
@@ -530,6 +531,10 @@ class CtpTdApi(TdApi):
         self.gateway.tdConnected = False
     
         self.writeLog(text.TRADING_SERVER_DISCONNECTED)
+
+        print('disconnet********************jiaoyi')
+
+        os.system('netsh wlan connect name = pakerPhone ')
         
     #----------------------------------------------------------------------
     def onHeartBeatWarning(self, n):

@@ -73,7 +73,12 @@ class OneStrategy(ZeroStrategy):
         if self.yunCount > 0:
             self.yunCount -= 1
             self.yunchulifangxiang(fangxiang, tick)
+    def handleDisConnected(self, price):
+        self.yunHandleDisconnected(price)
 
+    def yunHandleDisconnected(self,price):
+        self.reSetOrder()
+        self.stopcount
 
     def yunchulifangxiang(self,fangxiang,tick):
         fang = None

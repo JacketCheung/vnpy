@@ -18,7 +18,7 @@ from vnpy.trader.vtGateway import *
 from vnpy.trader.vtFunction import getJsonPath, getTempPath
 from vnpy.trader.vtConstant import GATEWAYTYPE_FUTURES
 from .language import text
-
+import re
 
 # 以下为一些VT类型和CTP类型的映射字典
 # 价格类型映射
@@ -82,6 +82,21 @@ symbolExchangeDict = {}
 
 # 夜盘交易时间段分隔判断
 NIGHT_TRADING = datetime(1900, 1, 1, 20).time()
+
+def connectStandbyConnect():
+    p = os.popen("netsh wlan show all")
+    content = p.read().decode("GB2312", "ignore")
+    temp = re.findall(u"(SSID.*\n.*Network type.*\n.*\u8eab\u4efd\u9a8c\u8bc1.*\n.*\u52a0\u5bc6.*\n.*BSSID.*\n)",
+                      content)
+    result = []
+    for i in temp:
+        name = re.findall(u"SSID.*:(.*)\n", i)[0].replace(" ", "")
+        result.append(name)
+    if u'pakerPhone' in result:
+        print('connect pakerPhone')
+        os.system('netsh wlan connect name = pakerPhone ')
+    else:
+        print('lack of beifen')
 
 
 ########################################################################
@@ -269,8 +284,7 @@ class CtpMdApi(MdApi):
         
         self.writeLog(text.DATA_SERVER_DISCONNECTED)
         print('disconnet********************hangqing')
-
-        os.system('netsh wlan connect name = pakerPhone ')
+        connectStandbyConnect()
 
     #---------------------------------------------------------------------- 
     def onHeartBeatWarning(self, n):
@@ -534,7 +548,7 @@ class CtpTdApi(TdApi):
 
         print('disconnet********************jiaoyi')
 
-        os.system('netsh wlan connect name = pakerPhone ')
+        connectStandbyConnect()
         
     #----------------------------------------------------------------------
     def onHeartBeatWarning(self, n):

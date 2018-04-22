@@ -18,13 +18,13 @@
 
 from __future__ import division
 
-import sys
-sys.path.append("C:\Users\zpparker\Downloads\\vnpy-master\\run\examples\DataRecording")
 from vnpy.trader.vtObject import VtBarData
 from vnpy.trader.vtConstant import EMPTY_STRING
 from vnpy.trader.app.ctaStrategy.ctaTemplate import (CtaTemplate, 
                                                      BarGenerator,
                                                      )
+
+
 from vnpy.trader.app.ctaStrategy.ctaTempleteExtension import zhibiao
 from datetime import datetime,time
 
@@ -118,12 +118,18 @@ class ZeroStrategy(CtaTemplate):
         self.writeCtaLog(u'%s策略停止' %self.name)
         self.putEvent()
     def cancelVtOrder(self,order,yuanyin,fangxiang):
-        print(yuanyin,'cancle')
+        self.writeCtaLog(yuanyin,'cancelorder')
         self.cancelOrder(order)
         if fangxiang == 'buy':
             self.buyOrder = None
         elif fangxiang == 'short':
             self.shortOrder = None
+        elif fangxiang == 'sell':
+            self.sellOrder == None
+        elif fangxiang == 'cover':
+            self.coverOrder = None
+        else:
+            self.writeCtaLog('ohmyghoa')
     #----------------------------------------------------------------------
     def buyTickCelve(self,tick):
         am = self.am
@@ -171,12 +177,12 @@ class ZeroStrategy(CtaTemplate):
             am = self.am
             fangxiang = None
             price = None
-            if self.posdetail.longPos > 0 and self.longOrder is not None and am.lastmacd > 0 and am.mj < 0:
-                self.cancelVtOrder(self.longOrder, u'必须平多','long')
+            if self.posdetail.longPos > 0 and self.sellOrder is not None and am.lastmacd > 0 and am.mj < 0:
+                self.cancelVtOrder(self.sellOrder, u'必须平多','sell')
                 fangxiang = duoping
                 price = am.tick.bidPrice1
-            elif self.posdetail.shortPos > 0 and self.shortOrder is not None and am.lastmacd < 0 and am.mj > 0:
-                self.cancelVtOrder(self.shortOrder, u'必须平空','short')
+            elif self.posdetail.shortPos > 0 and self.coverOrder is not None and am.lastmacd < 0 and am.mj > 0:
+                self.cancelVtOrder(self.coverOrder, u'必须平空','cover')
                 self.chulikaipingcang(kongping, am.tick.bidPrice1)
                 fangxiang = kongping
                 price = am.tick.askPrice1
@@ -197,7 +203,9 @@ class ZeroStrategy(CtaTemplate):
 
         self.bg.updateBar(bar)
         self.am.updateBar(bar)
+
         am = self.am
+
         if self.didinited:
          print('zhibiao','macd',am.macd,'diff',am.diff,'mj',am.mj,'time',bar.datetime,'end')
         #检查是否断网
@@ -220,21 +228,25 @@ class ZeroStrategy(CtaTemplate):
             self.reactOrder(order,None)
         print 'order', order.price,order.direction,order.offset      ,order.status,order.vtOrderID,order.orderTime,self.pos,self.am.tick.datetime
 
-        pass
+
 
     #----------------------------------------------------------------------
     def reactOrder(self,order,vtOrderID):
         print 'react',order.direction,order.offset
-        if (order.direction == DIRECTION_LONG and order.offset == OFFSET_OPEN) \
-                or \
-                (order.direction == DIRECTION_SHORT and (order.offset == OFFSET_CLOSE or order.offset == OFFSET_CLOSETODAY or order.offset == OFFSET_CLOSEYESTERDAY)):
+
+        if (order.direction == DIRECTION_LONG and order.offset == OFFSET_OPEN)                :
             print 'enterlong'
-            self.longOrder = vtOrderID
-        elif (order.direction == DIRECTION_LONG and (order.offset == OFFSET_CLOSE  or order.offset == OFFSET_CLOSETODAY or order.offset == OFFSET_CLOSEYESTERDAY)) \
-                or \
-                (order.direction == DIRECTION_SHORT and order.offset == OFFSET_OPEN):
+            self.buyOrder = vtOrderID
+        elif  (order.direction == DIRECTION_SHORT and (order.offset == OFFSET_CLOSE or order.offset == OFFSET_CLOSETODAY or order.offset == OFFSET_CLOSEYESTERDAY)):
+            print('entersell')
+            self.sellOrder = vtOrderID
+        elif    (order.direction == DIRECTION_SHORT and order.offset == OFFSET_OPEN):
             print 'entershort'
             self.shortOrder = vtOrderID
+        elif (order.direction == DIRECTION_LONG and (
+                order.offset == OFFSET_CLOSE or order.offset == OFFSET_CLOSETODAY or order.offset == OFFSET_CLOSEYESTERDAY)):
+            print('enter coveer')
+            self.coverOrder = vtOrderID
         else: print('enteranother')
     def onTrade(self, trade):
         # 发出状态更新事件
@@ -267,7 +279,7 @@ class ZeroStrategy(CtaTemplate):
                 if self.posdetail.longPos > 0 :
                     self.orderSell(price,1)
                 if self.buyOrder is not None:
-                    self.cancelVtOrder(self.longOrder,u'平多时候','buy')
+                    self.cancelVtOrder(self.buyOrder,u'平多时候','buy')
 
 
             elif fangxiang == kongping:
@@ -394,8 +406,10 @@ class ZeroStrategy(CtaTemplate):
 
     def reSetOrder(self):
         print '---------------------reset--------------'
-        self.shortOrder = 0
-        self.longOrder = 0
+        self.shortOrder = None
+        self.coverOrder = None
+        self.buyOrder = None
+        self.sellOrder = None
 
 
 

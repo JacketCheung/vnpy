@@ -12,8 +12,8 @@ import os
 import json
 from copy import copy
 from datetime import datetime, timedelta
-
-from vnpy.api.ctp import MdApi, TdApi, defineDict
+from vnpy.api.ctp import  MdApi,TdApi,defineDict
+from vnpy.api.ctp import MdApi,TdApi,defineDict
 from vnpy.trader.vtGateway import *
 from vnpy.trader.vtFunction import getJsonPath, getTempPath
 from vnpy.trader.vtConstant import GATEWAYTYPE_FUTURES

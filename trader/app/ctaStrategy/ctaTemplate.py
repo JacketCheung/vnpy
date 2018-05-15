@@ -112,8 +112,17 @@ class CtaTemplate(object):
     #----------------------------------------------------------------------
     def buy(self, price, volume, stop=False):
         """买开"""
+        print('return buy')
         return self.sendOrder(CTAORDER_BUY, price, volume, stop)
-    
+    #----------------------------------------------------------------------
+    def sellFok(self,price,volume,stop=False):
+        '''不成交就撤单'''
+        return self.sendOrder(CTAORDER_SELLFOK,price,volume,stop)
+    #----------------------------------------------------------------------
+
+    def coverFok(self, price, volume, stop=False):
+        """买平"""
+        return self.sendOrder(CTAORDER_COVERFOK, price, volume, stop)
     #----------------------------------------------------------------------
     def sell(self, price, volume, stop=False):
         """卖平"""

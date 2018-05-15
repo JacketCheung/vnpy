@@ -888,6 +888,7 @@ class PositionDetail(object):
             # 汇总今昨冻结
             self.longPosFrozen = self.longYdFrozen + self.longTdFrozen
             self.shortPosFrozen = self.shortYdFrozen + self.shortTdFrozen
+            print u'汇总',self.longPosFrozen,self.shortPosFrozen,'shortpos,std,stdf',self.shortPos,self.shortTd,self.shortTdFrozen
             
     #----------------------------------------------------------------------
     def output(self):
@@ -900,6 +901,9 @@ class PositionDetail(object):
     
     #----------------------------------------------------------------------
     def convertOrderReq(self, req):
+        req.offset = OFFSET_CLOSETODAY
+        return [req]
+    def convertOrderRequ(self, req):
         """转换委托请求"""
         # 普通模式无需转换
         if self.mode is self.MODE_NORMAL:
@@ -924,10 +928,12 @@ class PositionDetail(object):
                 
             # 平仓量超过总可用，拒绝，返回空列表
             if req.volume > posAvailable:
+                print 'not engine'
                 return []
             # 平仓量小于今可用，全部平今
             elif req.volume <= tdAvailable:
                 req.offset = OFFSET_CLOSETODAY
+                print('平今')
                 return [req]
             # 平仓量大于今可用，平今再平昨
             else:
@@ -943,7 +949,7 @@ class PositionDetail(object):
                 reqYd.offset = OFFSET_CLOSEYESTERDAY
                 reqYd.volume = req.volume - tdAvailable
                 l.append(reqYd)
-                
+                print '平昨'
                 return l
             
         # 平今惩罚模式，没有今仓则平昨，否则锁仓

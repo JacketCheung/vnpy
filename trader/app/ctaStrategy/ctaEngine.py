@@ -31,7 +31,6 @@ from vnpy.trader.vtConstant import *
 from vnpy.trader.vtObject import VtTickData, VtBarData
 from vnpy.trader.vtGateway import VtSubscribeReq, VtOrderReq, VtCancelOrderReq, VtLogData
 from vnpy.trader.vtFunction import todayDate, getJsonPath
-
 from .ctaBase import *
 from .strategy import STRATEGY_CLASS
 
@@ -109,7 +108,7 @@ class CtaEngine(object):
         req.currency = strategy.currency        
         
         # 设计为CTA引擎发出的委托只允许使用限价单
-        req.priceType = PRICETYPE_LIMITPRICE    
+        req.priceType = PRICETYPE_LIMITPRICE
         
         # CTA委托类型映射
         if orderType == CTAORDER_BUY:
@@ -127,6 +126,15 @@ class CtaEngine(object):
         elif orderType == CTAORDER_COVER:
             req.direction = DIRECTION_LONG
             req.offset = OFFSET_CLOSE
+        elif orderType == CTAORDER_COVERFOK:
+            req.direction = DIRECTION_LONG
+            req.offset = OFFSET_CLOSE
+            req.priceType = PRICETYPE_FOK
+        elif orderType == CTAORDER_SELLFOK:
+            req.direction = DIRECTION_SHORT
+            req.offset = OFFSET_CLOSE
+            req.priceType = PRICETYPE_FOK
+
             
         # 委托转换
         reqList = self.mainEngine.convertOrderReq(req)

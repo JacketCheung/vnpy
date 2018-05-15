@@ -13,6 +13,8 @@ CTAORDER_BUY = u'买开'
 CTAORDER_SELL = u'卖平'
 CTAORDER_SHORT = u'卖开'
 CTAORDER_COVER = u'买平'
+CTAORDER_SELLFOK = u'fok卖平'
+CTAORDER_COVERFOK = u'fok买平'
 
 # 本地停止单状态
 STOPORDER_WAITING = u'等待中'

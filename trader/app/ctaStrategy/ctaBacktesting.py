@@ -460,8 +460,16 @@ class BacktestingEngine(object):
             order.offset = OFFSET_OPEN
         elif orderType == CTAORDER_COVER:
             order.direction = DIRECTION_LONG
-            order.offset = OFFSET_CLOSE     
-        
+            order.offset = OFFSET_CLOSE
+        elif orderType == CTAORDER_COVERFOK:
+            order.direction = DIRECTION_LONG
+            order.offset = OFFSET_CLOSE
+            order.priceType = PRICETYPE_FOK
+        elif orderType == CTAORDER_SELLFOK:
+            order.direction = DIRECTION_SHORT
+            order.offset = OFFSET_CLOSE
+            order.priceType = PRICETYPE_FOK
+
         # 保存到限价单字典中
         self.workingLimitOrderDict[orderID] = order
         self.limitOrderDict[orderID] = order

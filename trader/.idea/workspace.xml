@@ -13,7 +13,7 @@
     <favorites_list name="trader" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46828192">
+    <splitter split-orientation="horizontal" split-proportion="0.39030838">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
           <file leaf-file-name="strategyOne.py" pinned="false" current-in-tab="false">
@@ -29,33 +29,29 @@
           <file leaf-file-name="vtObject.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vtObject.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+                <state relative-caret-position="1593">
+                  <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ctpGateway.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/gateway/ctpGateway/ctpGateway.py">
+          <file leaf-file-name="ctaTemplate.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaTemplate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="889">
-                  <caret line="33" column="56" lean-forward="false" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-                  <folding>
-                    <element signature="e#100#109#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="381">
+                  <caret line="114" column="25" lean-forward="false" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../api/ctp/__init__.py">
+          <file leaf-file-name="ctaBacktesting.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="27">
-                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#19#44#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="97">
+                  <caret line="366" column="13" lean-forward="true" selection-start-line="366" selection-start-column="13" selection-end-line="366" selection-end-column="13" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -63,8 +59,28 @@
           <file leaf-file-name="ctaHistoryData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaHistoryData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4752">
-                  <caret line="184" column="46" lean-forward="false" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+                <state relative-caret-position="1090">
+                  <caret line="199" column="43" lean-forward="false" selection-start-line="199" selection-start-column="43" selection-end-line="199" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vtConstant.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vtConstant.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/language/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -73,8 +89,8 @@
           <file leaf-file-name="constant.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/language/chinese/constant.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+                <state relative-caret-position="766">
+                  <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -83,30 +99,8 @@
           <file leaf-file-name="downloadData.py" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/downloadData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dataService.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/dataService.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2457">
-                  <caret line="100" column="32" lean-forward="false" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#19#29#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gen.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../../tornado/gen.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="28431">
-                  <caret line="1068" column="0" lean-forward="false" selection-start-line="1068" selection-start-column="0" selection-end-line="1068" selection-end-column="0" />
+                <state relative-caret-position="27">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -115,19 +109,11 @@
           <file leaf-file-name="strategyZero.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyZero.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="9207">
-                  <caret line="353" column="24" lean-forward="false" selection-start-line="353" selection-start-column="24" selection-end-line="353" selection-end-column="24" />
+                <state relative-caret-position="9855">
+                  <caret line="382" column="24" lean-forward="false" selection-start-line="382" selection-start-column="24" selection-end-line="382" selection-end-column="24" />
                   <folding>
-                    <element signature="e#204#235#0" expanded="true" />
-                    <marker date="1524480884924" expanded="true" signature="1522:1939" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="1522:1970" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="1522:2151" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="3235:3267" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="5044:5707" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="5231:5340" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="5490:5668" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="8267:8875" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="14308:14430" ph="..." />
+                    <marker date="1525320720612" expanded="true" signature="6440:7528" ph="..." />
+                    <marker date="1525320720612" expanded="true" signature="15590:15876" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -137,55 +123,50 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="strategyZero.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="strategyZero.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyZero.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="123">
-                  <caret line="223" column="11" lean-forward="false" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="11" />
+                <state relative-caret-position="1041">
+                  <caret line="365" column="0" lean-forward="true" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
                   <folding>
-                    <element signature="e#204#235#0" expanded="true" />
-                    <marker date="1524480884924" expanded="true" signature="1522:1939" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="1522:1970" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="1522:2151" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="3235:3267" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="5044:5707" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="5231:5340" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="5490:5668" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="8267:8875" ph="..." />
-                    <marker date="1524480884924" expanded="true" signature="14308:14430" ph="..." />
+                    <marker date="1525320720612" expanded="true" signature="6440:7528" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Desktop/test.py">
+          <file leaf-file-name="vtEngine.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vtEngine.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="81">
-                  <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="77" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ctaTemplate.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaTemplate.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4151">
-                  <caret line="653" column="0" lean-forward="false" selection-start-line="653" selection-start-column="0" selection-end-line="653" selection-end-column="0" />
+                <state relative-caret-position="447">
+                  <caret line="920" column="21" lean-forward="true" selection-start-line="920" selection-start-column="21" selection-end-line="920" selection-end-column="21" />
                   <folding>
-                    <element signature="e#72#90#0" expanded="true" />
+                    <element signature="e#19#50#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="runService.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/runService.py">
+          <file leaf-file-name="ctaEngine.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaEngine.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="81">
-                  <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-                  <folding />
+                <state relative-caret-position="1989">
+                  <caret line="202" column="8" lean-forward="true" selection-start-line="202" selection-start-column="8" selection-end-line="202" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#435#466#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="runDataRecording.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataRecording.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="783">
+                  <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#19#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -200,41 +181,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="runCtaTrading.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="runCtaTrading.py" pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/CtaTrading/runCtaTrading.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dataService.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/TqDataService/dataService.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2511">
-                  <caret line="102" column="14" lean-forward="false" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="drEngine.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/dataRecorder/drEngine.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="runDataCleaning.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+                <state relative-caret-position="901">
+                  <caret line="109" column="22" lean-forward="false" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -246,42 +197,41 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>kaipantime</find>
-      <find>engin</find>
-      <find>strategyDict</find>
-      <find>engine</find>
-      <find>notintradingTime</find>
-      <find>Engine</find>
-      <find>engi</find>
-      <find>pos</find>
-      <find>cancelA</find>
-      <find>getPos</find>
-      <find>posdetail</find>
-      <find>chec</find>
       <find>chulikaip</find>
       <find>stopcount</find>
       <find>reSetOrder</find>
       <find>macdA</find>
       <find>self.pos</find>
       <find>断开\</find>
-      <find>onBar</find>
-      <find>cancel</find>
       <find>checkPingcang</find>
       <find>react</find>
       <find>断开</find>
-      <find>checkIfConnecting</find>
-      <find>check</find>
-      <find>必须平多</find>
+      <find>tick</find>
+      <find>onB</find>
+      <find>self.genOr</find>
       <find>cancelVt</find>
-      <find>chulikaipingcang</find>
-      <find>orderSell</find>
-      <find>on</find>
+      <find>平多</find>
+      <find>buy</find>
+      <find>self.genOrder</find>
+      <find>checkC</find>
+      <find>cancel</find>
+      <find>genOrder</find>
+      <find>checkCancelOrder</find>
+      <find>cancelVtOrder</find>
+      <find>notintradingTime</find>
+      <find>getPositionDetail</find>
+      <find>getPosDetail</find>
+      <find>getPositionDetail\</find>
+      <find>convertOrderReq</find>
+      <find>PRICE</find>
+      <find>shortTd</find>
+      <find>onBar</find>
+      <find>orderBuy</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/ppstrategy.py" />
         <option value="C:/vnpy/vnpy-1.7.2/examples/TushareDataService/dataService.py" />
         <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/strategyBeta.py" />
         <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/strategyrb.py" />
@@ -304,7 +254,6 @@
         <option value="$USER_HOME$/Downloads/vnpy-master/examples/QuantosDataService/dataService.py" />
         <option value="$USER_HOME$/Downloads/vnpy-master/examples/CtaBacktesting/loadCsv.py" />
         <option value="$USER_HOME$/Downloads/vnpy-master/examples/TushareDataService/dataService.py" />
-        <option value="$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py" />
         <option value="$USER_HOME$/Downloads/vnpy-master/examples/CtaBacktesting/runBacktesting.py" />
         <option value="C:/vnpy/vnpy-1.7.2/examples/TqDataService/downloadData.py" />
         <option value="C:/vnpy/vnpy-1.7.2/examples/TqDataService/dataService.py" />
@@ -314,24 +263,26 @@
         <option value="$PROJECT_DIR$/app/CtaBacktesting/loadCsv.py" />
         <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/CtaBacktesting/loadCsv.py" />
         <option value="$PROJECT_DIR$/app/CtaBacktesting/runBacktesting.py" />
-        <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataRecording.py" />
-        <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py" />
         <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/__init__.py" />
         <option value="$PROJECT_DIR$/app/ctaStrategy/__init__.py" />
-        <option value="$PROJECT_DIR$/app/ctaStrategy/ctaTemplate.py" />
         <option value="$PROJECT_DIR$/../network/netConnect.py" />
         <option value="$PROJECT_DIR$/../network/checkConnect.py" />
         <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/Network/runCheckNetwork.py" />
         <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/TqDataService/downloadData.py" />
         <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/strategyOne.py" />
         <option value="$USER_HOME$/Downloads/vnpy-dev/vnpy/data/tq/test.py" />
-        <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/CtaTrading/runCtaTrading.py" />
-        <option value="$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/dataService.py" />
-        <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/strategyZero.py" />
-        <option value="$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/downloadData.py" />
-        <option value="$USER_HOME$/Desktop/test.py" />
         <option value="$PROJECT_DIR$/gateway/ctpGateway/ctpGateway.py" />
-        <option value="$PROJECT_DIR$/../api/ctp/__init__.py" />
+        <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py" />
+        <option value="$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/downloadData.py" />
+        <option value="$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/dataService.py" />
+        <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataRecording.py" />
+        <option value="$PROJECT_DIR$/app/ctaStrategy/ctaBase.py" />
+        <option value="$PROJECT_DIR$/app/ctaStrategy/ctaEngine.py" />
+        <option value="$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py" />
+        <option value="$PROJECT_DIR$/vtEngine.py" />
+        <option value="$PROJECT_DIR$/app/ctaStrategy/strategy/strategyZero.py" />
+        <option value="$PROJECT_DIR$/app/ctaStrategy/ctaTemplate.py" />
+        <option value="$USER_HOME$/Downloads/vnpy-master/run/examples/CtaTrading/runCtaTrading.py" />
       </list>
     </option>
   </component>
@@ -372,7 +323,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test (1)">
+  <component name="RunManager" selected="Python.runDataCleaning (1)">
     <configuration name="downloadData (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -409,37 +360,37 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="runBacktesting (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="runDataCleaning (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/CtaBacktesting" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/dataRecorder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="trader" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/CtaBacktesting/runBacktesting.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/dataRecorder/runDataCleaning.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="runDataCleaning" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="trader" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/test.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -464,19 +415,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.runBacktesting (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.downloadData (3)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.downloadData (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.downloadData (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.downloadData (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.runDataCleaning" />
+      <item index="4" class="java.lang.String" itemvalue="Python.runDataCleaning (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.runDataCleaning (1)" />
         <item index="1" class="java.lang.String" itemvalue="Python.downloadData (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.downloadData (3)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.runBacktesting (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.runDataCleaning" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.downloadData (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -512,13 +463,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24977973" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261767" sideWeight="0.54933923" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261767" sideWeight="0.4506608" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261767" sideWeight="0.4506608" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995594" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995594" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -588,22 +539,27 @@
           <line>12</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py</url>
+          <line>466</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py</url>
+          <line>468</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/examples/TushareDataService/downloadData.py" />
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/examples/TushareDataService/dataService.py" />
-    <entry file="file://$PROJECT_DIR$/../../tushare/stock/trading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4634">
-          <caret line="1029" column="0" lean-forward="false" selection-start-line="1029" selection-start-column="0" selection-end-line="1029" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/examples/CtaBacktesting/runBacktesting.py" />
     <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyDualThrust.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -659,22 +615,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21168">
-          <caret line="795" column="25" lean-forward="false" selection-start-line="795" selection-start-column="25" selection-end-line="795" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../network/netConnect.py" />
     <entry file="file://$PROJECT_DIR$/../network/checkConnect.py" />
-    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="379" column="33" lean-forward="false" selection-start-line="379" selection-start-column="33" selection-end-line="379" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ctaStrategy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -686,13 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaTempleteExtension.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -710,20 +645,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/asyncio-3.4.3/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../data/tq/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/asyncio-3.4.3/setup.py" />
     <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/812299307/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -741,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataRecording.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/Network/runCheckNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -755,18 +670,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/ctpGateway/ctpGateway.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="296" column="16" lean-forward="false" selection-start-line="296" selection-start-column="16" selection-end-line="296" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/TqDataService/dataService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../data/tq/vntq.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6939">
-          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="695">
+          <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../tornado/gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28431">
+        <state relative-caret-position="27">
           <caret line="1068" column="0" lean-forward="false" selection-start-line="1068" selection-start-column="0" selection-end-line="1068" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../data/tq/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyDoubleMa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="107" column="32" lean-forward="false" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaTempleteExtension.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyOne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vtObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1593">
+          <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/downloadData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Wind/WAPI.PE/bin/WindPy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -787,23 +767,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/CtaTrading/runCtaTrading.py">
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        <state relative-caret-position="-260">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/TqDataService/dataService.py">
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaHistoryData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2511">
-          <caret line="102" column="14" lean-forward="false" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+        <state relative-caret-position="1090">
+          <caret line="199" column="43" lean-forward="false" selection-start-line="199" selection-start-column="43" selection-end-line="199" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dataRecorder/drEngine.py">
+    <entry file="file://$PROJECT_DIR$/vtConstant.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -811,125 +791,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py">
+    <entry file="file://$PROJECT_DIR$/language/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyOne.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/dataService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2457">
-          <caret line="100" column="32" lean-forward="false" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-          <folding>
-            <element signature="e#19#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaHistoryData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4752">
-          <caret line="184" column="46" lean-forward="false" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/language/chinese/constant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        <state relative-caret-position="766">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/text.py">
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaBacktesting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="77" />
+        <state relative-caret-position="97">
+          <caret line="366" column="13" lean-forward="true" selection-start-line="366" selection-start-column="13" selection-end-line="366" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/downloadData.py">
+    <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaEngine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="1989">
+          <caret line="202" column="8" lean-forward="true" selection-start-line="202" selection-start-column="8" selection-end-line="202" selection-end-column="8" />
+          <folding>
+            <element signature="e#435#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vtEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="920" column="21" lean-forward="true" selection-start-line="920" selection-start-column="21" selection-end-line="920" selection-end-column="21" />
+          <folding>
+            <element signature="e#19#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ctaStrategy/ctaTemplate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4151">
-          <caret line="653" column="0" lean-forward="false" selection-start-line="653" selection-start-column="0" selection-end-line="653" selection-end-column="0" />
-          <folding>
-            <element signature="e#72#90#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="381">
+          <caret line="114" column="25" lean-forward="false" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ctaStrategy/strategy/strategyZero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9207">
-          <caret line="353" column="24" lean-forward="false" selection-start-line="353" selection-start-column="24" selection-end-line="353" selection-end-column="24" />
+        <state relative-caret-position="1041">
+          <caret line="365" column="0" lean-forward="true" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
           <folding>
-            <element signature="e#204#235#0" expanded="true" />
-            <marker date="1524480884924" expanded="true" signature="1522:1939" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="1522:1970" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="1522:2151" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="3235:3267" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="5044:5707" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="5231:5340" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="5490:5668" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="8267:8875" ph="..." />
-            <marker date="1524480884924" expanded="true" signature="14308:14430" ph="..." />
+            <marker date="1525320720612" expanded="true" signature="6440:7528" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vtObject.py">
+    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataRecording.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="783">
+          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="e#19#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dataRecorder/runDataCleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1917">
+          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding>
+            <element signature="e#19#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/DataRecording/runDataCleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2241">
+          <caret line="83" column="12" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+          <folding>
+            <element signature="e#19#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dataRecorder/drEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5579">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/ctpGateway/ctpGateway.py">
+    <entry file="file://$USER_HOME$/Downloads/vnpy-dev/examples/TqDataService/dataService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="33" column="56" lean-forward="false" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-          <folding>
-            <element signature="e#100#109#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2538">
+          <caret line="103" column="39" lean-forward="false" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../api/ctp/__init__.py">
+    <entry file="file://$USER_HOME$/Downloads/vnpy-master/run/examples/CtaTrading/runCtaTrading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="901">
+          <caret line="109" column="22" lean-forward="false" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
